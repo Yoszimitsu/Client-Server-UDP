@@ -1,11 +1,11 @@
 ### Communication Client-Server UDP ###
-####Description####
+#### Description ####
 The Server offers a text
 transformation service with two functionalities: 
 1. removal of tabs and extra spaces,
 2. removal of tabs and extra spaces with random re-ordering of the words.
 
-#####Client specification:######
+##### Client specification: ######
 * The client should accept as input parameters both the server’s IP address and port
 number. For example: java ClientUDP 192.168.166.121 12345
 * Once the client is connected to the server, it will receive a message that indicates that
@@ -27,7 +27,7 @@ does not send any information to the server).
 session as it executes (e.g. Connected to 192.168.167.2, Waiting for a
 response, …)
 
-#####Server specification##### 
+##### Server specification ##### 
 * The server should accept as input parameter the port number for accepting connections.
 For example: java ServerUDP 12345
 * The server is always waiting for incoming datagrams that includes a letter (the
