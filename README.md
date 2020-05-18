@@ -1,13 +1,13 @@
-### Communication Client-Server UDP ###
-#### Description ####
+## Client-Server UDP ##
+### Description ###
 The Server offers a text
-transformation service with two functionalities: 
+transformation service with 2 functionalities: 
 1. removal of tabs and extra spaces,
 2. removal of tabs and extra spaces with random re-ordering of the words.
 
-##### Client specification: ######
+#### Client specification: #####
 * The client should accept as input parameters both the server’s IP address and port
-number. For example: java ClientUDP 192.168.166.121 12345
+number. 
 * Once the client is connected to the server, it will receive a message that indicates that
 the client is connected to the service.
 * Once the client receives this message, it should request two input textual lines to the
@@ -25,14 +25,13 @@ that when the user introduce ‘F’ as letter, the program will not read the fo
 does not send any information to the server).
 * The client should print out appropriate informative messages about its state during the
 session as it executes (e.g. Connected to 192.168.167.2, Waiting for a
-response, …)
+response… )
 
-##### Server specification ##### 
+#### Server specification #### 
 * The server should accept as input parameter the port number for accepting connections.
-For example: java ServerUDP 12345
 * The server is always waiting for incoming datagrams that includes a letter (the
 transformation service selected) and the text to be transformed.
-*The size of the reception buffer should be 20 bytes.
+* The size of the reception buffer should be 20 bytes.
 * The server sends the transformed text to the client that sent the datagram.
 * The answer of the server depends on the option selected by the client:
     * L: The server remove extra spaces and tabs. The result is a text with only one
@@ -41,4 +40,4 @@ space between each word.
 the text.
     * Any other option: The server send “Not supported option”.
 * As the client, the server should print out appropriate informative messages about its state
-as it executes (e.g., Waiting for a new client …).
+as it executes (e.g., Waiting for a new client… ).
