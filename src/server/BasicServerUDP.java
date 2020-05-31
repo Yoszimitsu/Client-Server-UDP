@@ -75,7 +75,7 @@ public class BasicServerUDP {
     }
 
     static public String messageAnalyzer(String key, String text) {
-        String respond = "";
+        String respond;
         ArrayList<String> message = new ArrayList<>();
         Scanner sc = new Scanner(text).useDelimiter("\\s+");
 

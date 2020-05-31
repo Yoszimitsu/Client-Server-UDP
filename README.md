@@ -27,7 +27,7 @@ does not send any information to the server).
 session as it executes (e.g. Connected to 192.168.167.2, Waiting for a
 response… )
 
-#### Server specification #### 
+#### Server specification: #### 
 * The server should accept as input parameter the port number for accepting connections.
 * The server is always waiting for incoming datagrams that includes a letter (the
 transformation service selected) and the text to be transformed.
